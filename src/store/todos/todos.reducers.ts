@@ -12,9 +12,19 @@ const initialState: State = {
 };
 
 export const reducer = (state: State = initialState, action: Action<any>) => {
-    console.log(state);
     switch (action.type) {
-        case Actions.ADD_TODO:
+        case Actions.GET_TODO_LIST:
+            return {
+                ...state,
+                todoList: []
+            };
+        case Actions.GET_TODO_SUCCESS:
+            return {
+                ...state,
+                todoList: action.payload
+            };
+        case Actions.ADD_TODO_SUCCESS:
+            console.log(action);
             return {
                 ...state,
                 todoList: state.todoList.concat(action.payload)
