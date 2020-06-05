@@ -7,7 +7,7 @@ import {createLogger} from "redux-logger";
 const logger = createLogger();
 
 const rootReducer = combineReducers({
-    todos: todosReducer
+    todos: todosReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

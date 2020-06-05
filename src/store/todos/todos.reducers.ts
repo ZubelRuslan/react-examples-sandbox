@@ -24,7 +24,6 @@ export const reducer = (state: State = initialState, action: Action<any>) => {
                 todoList: action.payload
             };
         case Actions.ADD_TODO_SUCCESS:
-            console.log(action);
             return {
                 ...state,
                 todoList: state.todoList.concat(action.payload)
